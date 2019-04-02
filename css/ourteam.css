@@ -1,0 +1,205 @@
+@import url('https://fonts.googleapis.com/css?family=Poppins:400,500,700');
+
+html, body{
+  height: 100%;
+  width: 100%;
+  font-family: 'Poppins', sans-serif;
+  color: #222;
+}
+body{
+  display: flex;
+  flex-direction: column;
+}
+
+/* NAV BAR */
+
+.navbar-nav li{
+  padding: 20px;
+}
+.nav-link{
+  font-size: 1.1em !important;
+}
+
+
+
+
+/* MEMBER IMAGES */
+.body{
+  margin-bottom: 2rem;
+}
+
+.member{
+  justify-content: center;
+}
+hr{
+  border-top: 2px solid #b4b4b4;
+  width: 70%;
+  margin-top: .3rem;
+  margin-bottom: 1rem;
+}
+
+.display-4{
+  font-size: 400%;
+}
+
+.text-center{
+  width: 100%;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+}
+.text-center .member{
+  text-align: center;
+}
+
+
+.member p{
+  display: block;
+  margin: 0 auto;
+  width: 200px;
+  height: 200px;
+  /* border: 1px solid crimson; */
+  overflow: hidden;
+  border-radius: 50%;
+}
+.member p img{
+  width: 100%;
+  height: 100%;
+  /* filter: grayscale(100%); */
+  transition: all;
+}
+
+.member p:hover > img{
+  cursor: pointer;
+  filter: none;
+}
+
+.member h4,
+.member h5{
+  position: relative;
+  overflow: hidden;
+  font-weight: 350;
+  margin: 0;
+  padding: 2px 5px;
+  transition-delay: 0.1s;
+  opacity: 0;
+}
+.member p:hover ~ h4,
+.member p:hover ~ h5{
+  opacity: 1;
+}
+
+.member h4{
+  font-weight: 500;
+  margin: 5px 0;
+}
+
+.member h4::before,
+.member h5::before{
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 100%;
+  width: 100%;
+  height: 100%;
+  background: crimson;
+  transition: 1s;
+}
+
+.member h4::before{
+  left: inherit;
+  right: 100%;
+  background: #333;
+}
+
+.member p:hover ~ h5::before{
+  left: -100%;
+}
+
+.member p:hover ~ h4::before{
+  left: inherit;
+  right: -100%;
+}
+
+
+/* FOOTER */
+footer {
+    background: #333;
+    padding: 0;
+    color: #ffffff;
+    margin-top: auto;
+}
+footer h3{
+  margin-top: 1rem;
+}
+footer p{
+  margin-top: 1.4rem;
+}
+footer ul{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-transform: uppercase;
+  font-size: 2.2rem;
+}
+footer ul li{
+  list-style: none;
+  margin: 0 1em auto;
+  color: #ffffff;
+}
+footer a{
+  text-decoration: none;
+  color: #ffffff;
+}
+footer #fb:hover,
+footer #gm:hover,
+footer #git:hover{
+  color: crimson;
+}
+.logo span{
+  color: crimson;
+  font-weight: 700;
+}
+
+@media (max-width: 768px) {
+  .logo{
+    font-size: 2rem;
+  }
+  .member p{
+    width: 180px;
+    height: 180px;
+  }
+  .display-4{
+    font-weight: 450;
+    font-size: 350%;
+  }
+  footer ul{
+    font-size: 2rem;
+  }
+  footer ul li{
+    margin: 0 .8em auto;
+  }
+}
+@media (max-width: 576px) {
+  .logo{
+    font-size: 1.5rem;
+  }
+  .member p{
+    width: 170px;
+    height: 170px;
+  }
+  .display-4{
+    font-weight: 400;
+    font-size: 300%;
+  }
+  footer ul{
+    font-size: 1.6rem;
+  }
+  footer ul li{
+    margin: 0 .8em auto;
+  }
+}
+/* Bootstrap solution */
+[class*="col-"] {
+    padding: 1rem;
+}
