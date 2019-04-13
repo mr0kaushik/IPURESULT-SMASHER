@@ -68,12 +68,15 @@ footer a{
   text-decoration: none;
   color: #ffffff;
 }
+
 footer #fb:hover,
 footer #gm:hover,
-footer #git:hover{
+footer #git:hover,
+footer #fb:focus,
+footer #gm:focus,
+footer #git:focus{
   color: crimson;
 }
-
 .logo span{
   color: crimson;
   font-weight: 700;
