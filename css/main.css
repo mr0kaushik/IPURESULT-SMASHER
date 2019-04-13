@@ -56,7 +56,8 @@ form button{
   letter-spacing: 2px;
   font-weight:400;
 }
-form button:hover{
+form button:hover,
+form button:focus{
   background: #81CBCB;
 }
 .container{
@@ -66,11 +67,18 @@ form button:hover{
   width:100%
 }
 
-#stu_data_table{
+#stu_data_table{    
   border: 2px solid #333;
-  text-align:justify;
-  width: 50%;
+  text-align: justify;
+  min-width: 400px;
+  font-size: 140%;
+  height: 225px;
+  margin: 1rem auto;
+}
+img {
+  border: 1px solid #333;
   margin: 2rem auto;
+  width: 180px;
 }
 #stu_data_table tr{
   border: 1px solid #333;
@@ -78,12 +86,14 @@ form button:hover{
 #sem_table{
   border: 2px solid #333;
   text-align:justify;
-  width: 80%;
-  margin: 2rem auto;
+ 
+  font-size: 1.3em;
+  margin: 1rem auto;
 }
 #sem_table th{
   border: 2px solid #333;
   text-align: center;
+  width:auto;
 }
 #sem_table tr{
   border: 1px solid #333;
@@ -92,7 +102,12 @@ form button:hover{
   text-align: center;
   border: 1px solid #333;
 }
-
+.error{
+  margin: 2rem auto;
+  text-align: center;
+  font-size: 2rem;
+  font-weight: 700;
+}
 
 
 /* FOOTER */
@@ -127,7 +142,10 @@ footer a{
 }
 footer #fb:hover,
 footer #gm:hover,
-footer #git:hover{
+footer #git:hover,
+footer #fb:focus,
+footer #gm:focus,
+footer #git:focus{
   color: crimson;
 }
 
@@ -143,6 +161,8 @@ footer #git:hover{
   h2{
     font-size: 1.8rem;
   }
+
+
   form input{
     font-size: 16px;
     min-width: 5rem;
@@ -153,6 +173,13 @@ footer #git:hover{
     font-size: 16px;
     display: block;
     height: 32px;
+  }
+  #stu_data_table{    
+    font-size: 100%;
+    min-width: 350px;
+  }
+  #sem_table{
+    font-size: 90%;
   }
 
   footer ul{
@@ -182,7 +209,13 @@ footer #git:hover{
     height: 30px;
   }
 
-
+  #stu_data_table{
+    font-size: 90%;
+    min-width: 300px;
+  }
+  #sem_table{
+    font-size: 80%;
+  }
 
   footer ul{
     font-size: 1.6rem;
@@ -191,6 +224,44 @@ footer #git:hover{
     margin: 0 .8em auto;
   }
 }
+@media (max-width: 375px) {
+  .logo{
+    font-size: 1.3rem;
+  }
+  h2{
+    font-size: 1.4rem;
+  }
+
+  form input{
+    margin-top: 1rem;
+    font-size: 14px;
+    min-width: 4rem;
+    height: 3rem;
+  }
+
+  form button{
+    font-size: 14px;
+    display: block;
+    height: 30px;
+  }
+
+  #stu_data_table{
+    font-size: 90%;
+    min-width: 200px;
+  }
+  #sem_table{
+    font-size: 60%;
+  }
+
+  footer ul{
+    font-size: 1.6rem;
+  }
+  footer ul li{
+    margin: 0 .8em auto;
+  }
+}
+
+
 /* Bootstrap solution */
 [class*="col-"] {
     padding: 1rem;
