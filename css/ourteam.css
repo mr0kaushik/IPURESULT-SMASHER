@@ -69,7 +69,8 @@ hr{
   transition: all;
 }
 
-.member p:hover > img{
+.member p:hover > img
+.member p:focus > img{
   cursor: pointer;
   filter: none;
 }
@@ -85,7 +86,9 @@ hr{
   opacity: 0;
 }
 .member p:hover ~ h4,
-.member p:hover ~ h5{
+.member p:hover ~ h5,
+.member p:focus ~ h4,
+.member p:focus ~ h5{
   opacity: 1;
 }
 
@@ -112,11 +115,13 @@ hr{
   background: #333;
 }
 
-.member p:hover ~ h5::before{
+.member p:hover ~ h5::before,
+.member p:focus ~ h5::before{
   left: -100%;
 }
 
-.member p:hover ~ h4::before{
+.member p:hover ~ h4::before,
+.member p:focus ~ h4::before{
   left: inherit;
   right: -100%;
 }
@@ -151,9 +156,13 @@ footer a{
   text-decoration: none;
   color: #ffffff;
 }
+
 footer #fb:hover,
 footer #gm:hover,
-footer #git:hover{
+footer #git:hover,
+footer #fb:focus,
+footer #gm:focus,
+footer #git:focus{
   color: crimson;
 }
 .logo span{
