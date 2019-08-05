@@ -1,5 +1,5 @@
 # IPURESULT-SMASHER
-A website to check your GGSIPU result
+Web app to check your GGSIPU result
 Currently it is in working phase
 so it only shows Btech CSE 4th sem marks (DEC 2018).
 
